@@ -17,6 +17,6 @@ try {
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
-echo ('connected to Netland using ');
+echo ('connected to ' . $db  . ' using ');
 echo $pdo->query('select version()')->fetchColumn();
 ?>  
